@@ -1,17 +1,94 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
-    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=jacinto.design">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <title>Conference Survey Form</title>
     <link rel="stylesheet" href="style.css">
+  <script type="text/javascript">
+    function CheckStatus(val){
+      var element=document.getElementById('status');
+      if(val=='Select current role'||val=='other')
+        element.style.display='block';
+      else  
+        element.style.display='none';
+}
+</script> 
 </head>
 <body>
- <i class="fas fa-coffee"></i>
- <h1>The future page</h1>
-    <!-- Script-->
-    <script src="script.js"></script>
-</body>
+  <div class = "container">
+  <h1 id = "title"> Computational Linguistics Summer School 2020 Survey</h1>
+    <p id = "description"> Please fill a short survey </p>
+    <form id = "survey-form" >
+
+<!--    Name    -->
+      <div class = "form-group">
+        <label id = "name-label" for = "name"> <img src="https://img.icons8.com/ios-glyphs/30/000000/person-male.png"/>Name</label>
+          <input id = "name" type = "text" name = "name" class = "form-control" placeholder = "Enter your name" required>
+      </div>
+ 
+<!-- Email  -->
+      <div class = "form-group">
+        <label id = "email-label" for = "email">e-mail</label>
+          <input id = "email" type = "email" name = "email" class = "form-control" placeholder = "Enter your e-mail" required>
+      </div>
+
+<!--    Age    -->
+      <div class = "form-group">
+        <label id = "number-label" for = "number">Age</label>
+          <input id = "number" min = "17" max = "99" type = "number" name = "age" class = "form-control" placeholder = "Select your age">
+      </div>
+      
+<!--    Status    -->
+      <div class = "form-group">
+        <p class = "p-status">Your status</p>
+          <select id = "dropdown" type = "text" name = "status" class = "form-control" placeholder = "Select your status" required onchange='CheckStatus(this.value)'>
+            <option disabled="" selected="" value="">Select current role</option>
+            <option value="full-time-job">Full-time worker</option>
+            <option value="part-time-job">Part-time worker</option>
+            <option value="job-seeker">Job-seeker</option>
+            <option value="phd-student">Ph.D. student </option>
+            <option value="master-student">Master student</option>
+            <option value="undergrad">Undergraduate student</option>
+            <option value="other">other</option>
+        </select>
+        <input type="text" name="status" id="status" class = "form-control" placeholder = "Enter your status" required style='display:none;'/>
+      </div>
+
+<!-- Programming experience -->
+      <div class = "form-group">
+        <p class = "p-status"> Your programming experience </p>
+        <label class = "prog-label"><input name="prog-experience" value="less-than-6m" type="radio" class="input-radio" checked="">less than 6 months </label>
+        <label class = "prog-label"><input name="prog-experience" value="6-12m" type="radio" class="input-radio" checked="">6-12 months </label>
+        <label class = "prog-label"><input name="prog-experience" value="1-2y" type="radio" class="input-radio" checked="">1-2 years</label>
+        <label class = "prog-label"><input name="prog-experience" value="more=than-2y" type="radio" class="input-radio" checked="">more than 2 years</label>
+        </div>
+      
+<!-- Programming languages survey-->
+      <div class = "form-group">
+        <p class = "p-status"> Programming languages that you know <span class = "clue">(Check all that apply)</clue></p>
+        <label class = "prog-label"><input name="proglang" value="Python" type="checkbox" class="input-checkbox">Python</label>
+        <label class = "prog-label"><input name="proglang" value="Java" type="checkbox" class="input-checkbox">Java</label>
+        <label class = "prog-label"><input name="proglang" value="Ruby" type="checkbox" class="input-checkbox">Ruby</label>
+        <label class = "prog-label"><input name="proglang" value="JavaScript" type="checkbox" class="input-checkbox">JavaScript</label>
+        <label class = "prog-label"><input name="proglang" value="C" type="checkbox" class="input-checkbox">C</label>
+        <label class = "prog-label"><input name="proglang" value="C++" type="checkbox" class="input-checkbox">C++</label>
+        <label class = "prog-label"><input name="proglang" value="Python" type="checkbox" class="input-checkbox">Swift</label> 
+        </div>
+      <div class = "form-group">
+        <p class = "p-status"> Any comments/suggestions/questions? </p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+      </div>
+      <div class = "form-group">
+        <button class="submit-button" id="submit" title="submit">
+          Submit!
+          </button>
+      </div>
+    </form>
+  </div>
+  </body>
 </html>
+        
+     
