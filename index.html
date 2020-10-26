@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conference Survey Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7510f8257d.js" crossorigin="anonymous"></script>
   <script type="text/javascript">
     function CheckStatus(val){
       var element=document.getElementById('status');
@@ -25,25 +26,25 @@
 
 <!--    Name    -->
       <div class = "form-group">
-        <label id = "name-label" for = "name"> <img src="https://img.icons8.com/ios-glyphs/30/000000/person-male.png"/>Name</label>
+        <label id = "name-label" for = "name"><i class="fas fa-user-check"></i>Name</label>
           <input id = "name" type = "text" name = "name" class = "form-control" placeholder = "Enter your name" required>
       </div>
  
 <!-- Email  -->
       <div class = "form-group">
-        <label id = "email-label" for = "email">e-mail</label>
+        <label id = "email-label" for = "email"><i class="fas fa-envelope"></i>E-mail</label>
           <input id = "email" type = "email" name = "email" class = "form-control" placeholder = "Enter your e-mail" required>
       </div>
 
 <!--    Age    -->
       <div class = "form-group">
-        <label id = "number-label" for = "number">Age</label>
+        <label id = "number-label" for = "number"><i class="fas fa-birthday-cake"></i>Age</label>
           <input id = "number" min = "17" max = "99" type = "number" name = "age" class = "form-control" placeholder = "Select your age">
       </div>
       
 <!--    Status    -->
       <div class = "form-group">
-        <p class = "p-status">Your status</p>
+        <p class = "p-status"><i class="fas fa-user-tag"></i>Your current status</p>
           <select id = "dropdown" type = "text" name = "status" class = "form-control" placeholder = "Select your status" required onchange='CheckStatus(this.value)'>
             <option disabled="" selected="" value="">Select current role</option>
             <option value="full-time-job">Full-time worker</option>
@@ -59,7 +60,7 @@
 
 <!-- Programming experience -->
       <div class = "form-group">
-        <p class = "p-status"> Your programming experience </p>
+        <p class = "p-status"> <i class="fas fa-laptop-code"></i> Your programming experience </p>
         <label class = "prog-label"><input name="prog-experience" value="less-than-6m" type="radio" class="input-radio" checked="">less than 6 months </label>
         <label class = "prog-label"><input name="prog-experience" value="6-12m" type="radio" class="input-radio" checked="">6-12 months </label>
         <label class = "prog-label"><input name="prog-experience" value="1-2y" type="radio" class="input-radio" checked="">1-2 years</label>
@@ -68,7 +69,7 @@
       
 <!-- Programming languages survey-->
       <div class = "form-group">
-        <p class = "p-status"> Programming languages that you know <span class = "clue">(Check all that apply)</clue></p>
+        <p class = "p-status"><i class="fas fa-code"></i> Programming languages that you know <span class = "clue">(Check all that apply)</clue></p>
         <label class = "prog-label"><input name="proglang" value="Python" type="checkbox" class="input-checkbox">Python</label>
         <label class = "prog-label"><input name="proglang" value="Java" type="checkbox" class="input-checkbox">Java</label>
         <label class = "prog-label"><input name="proglang" value="Ruby" type="checkbox" class="input-checkbox">Ruby</label>
@@ -78,7 +79,7 @@
         <label class = "prog-label"><input name="proglang" value="Python" type="checkbox" class="input-checkbox">Swift</label> 
         </div>
       <div class = "form-group">
-        <p class = "p-status"> Any comments/suggestions/questions? </p>
+        <p class = "p-status"> <i class="fas fa-question-circle"></i> Any comments/suggestions/questions? </p>
         <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
       </div>
       <div class = "form-group">
